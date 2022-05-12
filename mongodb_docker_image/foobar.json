@@ -1,0 +1,104 @@
+{
+	"test_case": "11_root_SingleInstanceDB_DBCS_os_jsoncommand_log_collection",
+	"test_family": "11",
+	"timestamp": "04-01-2022 06:09:27",
+	"description": "Test a collection (triggered by \"jsoncommand\" command) for OS component generates the proper collection end audit CEF JSON and expected collection files are automatically uploaded to a PAR bucket.",
+	"json_type": "end_collection_audit_cef_notification",
+	"farm_job_id": "foobar",
+	"test_json": {
+		"audits": {
+			"cloudEventsVersion": "0.1",
+			"eventType": "com.oraclecloud.databaseservice.dbcs.dbsystem.audit",
+			"eventTypeVersion": "2.0",
+			"source": "DataPlane",
+			"eventID": "d7dfe16f-3c01-46de-aca4-54fc20a15058",
+			"eventTime": "2022-04-01T06:08:24.583Z",
+			"contentType": "application/json",
+			"extensions": {
+				"callerTenancyID": "ocid1.tenancy.oc1..aaaaaaaapw4mobyuoj7ny3gthfzo2zws52yg7s772qber3cdp2j7spl6tvpq",
+				"availabilityDomain": "zvXp:US-ASHBURN-AD-3",
+				"agentIdentifierString": "AHF_221000_202203311924",
+				"infrastructureAvailabilityDomain": "SVYj:US-ASHBURN-AD-2",
+				"region": "us-ashburn-1",
+				"service": "dbcs",
+				"infrastructureCompartmentID": "ocid1.tenancy.oc1..aaaaaaaady43dpkwjalr663m3o4ip7fiej72am6lo6m4ingjdsz5wmt3wwxa",
+				"resourceID": "ocid1.dbsystem.oc1.iad.anuwcljswzljmeiatt4elt6dza7q3mahvcg5tykxqrsgwp5yternegqe2x5a",
+				"resourceType": "dbsystem",
+				"hostname": "ahftestlvm1",
+				"t2FleetName": "DBCS",
+				"t2ProjectName": "TFADBCS",
+				"tenancyID": "ocid1.tenancy.oc1..aaaaaaaapw4mobyuoj7ny3gthfzo2zws52yg7s772qber3cdp2j7spl6tvpq",
+				"tenantName": "paasdevdbcssi",
+				"nodeList": [],
+				"exaCCID": "",
+				"logResource": "",
+				"visibility": "ops",
+				"compartmentID": "ocid1.compartment.oc1..aaaaaaaauz6gm5ycsg2q2haulm2mbwwqkxalyzrocfoakzsl2wdydsc7ax7q",
+				"resourceName": "ahftesting_lvm1(FORAHF_DND)",
+				"compartmentName": "VMDBSI-Dev",
+				"freeFormTags": {},
+				"definedTags": {},
+				"retentionPeriod": "90",
+				"priority": "3",
+				"opsONStopicID": "",
+				"severity": "info",
+				"topology": {
+					"dbSystemOCID": "ocid1.dbsystem.oc1.iad.anuwcljswzljmeiatt4elt6dza7q3mahvcg5tykxqrsgwp5yternegqe2x5a",
+					"compartmentOCID": "ocid1.compartment.oc1..aaaaaaaauz6gm5ycsg2q2haulm2mbwwqkxalyzrocfoakzsl2wdydsc7ax7q",
+					"dbNodes": [{
+						"dbNodeOCID": "ocid1.dbnode.oc1.iad.anuwcljswzljmeiak7pfmfuwg2njtl6imkfbj5kgset7aowpliqa3kighlea",
+						"dbNodeUID": "ahftestlvm1"
+					}],
+					"dbHomes": [{
+						"dbHomeOCID": "ocid1.dbhome.oc1.iad.anuwcljsj7pl2faauwfd7eu64rxxczkz3jv5oegvp7kj455dwu5zvgbn5m5q",
+						"dbHomeUID": "dbhome20211111054816",
+						"databases": [{
+							"dbOCID": "ocid1.database.oc1.iad.anuwcljswzljmeiau3jj45gvj7idgk3tmjwjyf2ck6ulycx7bmvnfpazlgeq",
+							"dbUID": "AHFLVM1_iad3fs",
+							"dbSystemId": "ocid1.dbsystem.oc1.iad.anuwcljswzljmeiatt4elt6dza7q3mahvcg5tykxqrsgwp5yternegqe2x5a",
+							"dbName": "AHFLVM1",
+							"dbHome": "ocid1.dbhome.oc1.iad.anuwcljsj7pl2faauwfd7eu64rxxczkz3jv5oegvp7kj455dwu5zvgbn5m5q",
+							"dbUniqueName": "AHFLVM1_iad3fs",
+							"vmClusterId": null,
+							"databaseID": "ocid1.database.oc1.iad.anuwcljswzljmeiau3jj45gvj7idgk3tmjwjyf2ck6ulycx7bmvnfpazlgeq",
+							"dataguard": []
+						}]
+					}]
+				},
+				"dataplaneEventType": "com.oraclecloud.databaseservice.dbsystem.info"
+			},
+			"data": {
+				"metricTarget": "unknown-ahftestlvm1-tfa.underscore.collection.underscore.end.underscore.20220401060728ahftestlvm1",
+				"additionalDetails": {
+					"description": "Oracle operations ran 'tfactl diagcollect' command to collect logs for Component(s) os, compliance, chmos, cha with duration time from 2022-04-01T05:07:23.668Z to 2022-04-01T06:07:23.669Z",
+					"eventName": "AUDIT.DB_CLUSTER.LOG.COLLECTION",
+					"serviceType": "dbcs",
+					"component": "audit",
+					"auditType": "Collection",
+					"collectionId": "20220401060728ahftestlvm1",
+					"requestId": "11.os_jsoncommand_log_collection.1",
+					"collectionComponent": [
+						"os",
+						"compliance",
+						"chmos",
+						"cha"
+					],
+					"parUrl": "https://objectstorage.us-ashburn-1.oraclecloud.com/p/s_a_0diUe-RCD8U3YDyq31yMMzOT14UP_4BnvpHh3J39W_NUclO_ihTxWCJoN9vP/n/idhalakuwayp/b/tfatest2/o/",
+					"status": "completed",
+					"dbName": "",
+					"fromTime": "2022-04-01T05:07:23.668Z",
+					"toTime": "2022-04-01T06:07:23.669Z",
+					"clusterName": "",
+					"collectionFiles": [{
+						"zipFileName": "/opt/oracle.ahf/data/repository/collection_Fri_Apr_01_06_07_36_UTC_2022_node_local/ahftestlvm1.tfa_Fri_Apr_01_06_07_33_UTC_2022.zip",
+						"uploadExitCode": "200",
+						"zipFileSize": 441181,
+						"zipFileShaSum": "27c63d42a9d6715cc7e46690ea4e41a07418f3f7cfab4818f9a69b9a8f72c99b"
+					}],
+					"dbSystemId": "ocid1.dbsystem.oc1.iad.anuwcljswzljmeiatt4elt6dza7q3mahvcg5tykxqrsgwp5yternegqe2x5a",
+					"auditTime": "2022-04-01T06:08:24.583Z"
+				}
+			}
+		}
+	}
+}

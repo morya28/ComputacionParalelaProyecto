@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: mongodb
-        image: mongo
+        image: moryacm/computacionparalela_mongodb
         ports:
         - containerPort: 27017
 ---

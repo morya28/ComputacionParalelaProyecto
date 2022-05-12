@@ -1,0 +1,297 @@
+{
+	"test_case": "02_root_archive_gap",
+	"test_family": "02",
+	"timestamp": "04-11-2022 08:59:10",
+	"description": "Test failed database archive backup is recorded by Telemetry.",
+	"json_type": "telemetry",
+	"farm_job_id": "eggs",
+	"test_json": {
+		"hostname": "den00kez",
+		"timestamp": "2022-04-11 01:59:06.321",
+		"tfa_version": "221000",
+		"tfa_buildid": "20220408194411",
+		"projectid": "",
+		"fleetid": "",
+		"json_version": "1.6",
+		"clustername": "crs-orcl",
+		"timezone": "PST8PDT",
+		"Node_Status": [{
+			"node": "den00kez",
+			"status": "ONLINE",
+			"BLACKOUT": false,
+			"BLACKOUT_COMMENT": "",
+			"ANOMALY_DESCRIPTION": {},
+			"STATE_CHANGE_DESCRIPTION": {}
+		}],
+		"CRS": {
+			"STATUS": "ONLINE",
+			"BLACKOUT": false,
+			"BLACKOUT_COMMENT": "",
+			"TIMEZONE": "PST8PDT",
+			"INCIDENTS": [],
+			"ANOMALY_DESCRIPTION": {},
+			"STATE_CHANGE_DESCRIPTION": {}
+		},
+		"ASM": [{
+			"INSTANCE": "+ASM1",
+			"STATUS": "ONLINE",
+			"STATE_DETAILS": "Started",
+			"INTERNAL_STATE": "STABLE",
+			"BLACKOUT": false,
+			"BLACKOUT_COMMENT": "",
+			"TIMEZONE": "PST8PDT",
+			"DISKGROUPS": [{
+				"NAME": "ora.DATA.dg",
+				"STATUS": "ONLINE",
+				"INTERNAL_STATE": "STABLE",
+				"USED_PERCENT": 30.49,
+				"BLACKOUT": false,
+				"BLACKOUT_COMMENT": "",
+				"ANOMALY_DESCRIPTION": {},
+				"STATE_CHANGE_DESCRIPTION": {}
+			}],
+			"INCIDENTS": [],
+			"ANOMALY_DESCRIPTION": {},
+			"STATE_CHANGE_DESCRIPTION": {}
+		}],
+		"LSNR": [{
+				"NAME": "ora.LISTENER.lsnr",
+				"STATUS": [{
+					"NODE": "den00kez",
+					"STATUS": "ONLINE",
+					"BLACKOUT": false,
+					"BLACKOUT_COMMENT": "",
+					"ANOMALY_DESCRIPTION": {},
+					"STATE_CHANGE_DESCRIPTION": {}
+				}]
+			},
+			{
+				"NAME": "ora.ASMNET1LSNR_ASM.lsnr",
+				"STATUS": [{
+					"NODE": "den00kez",
+					"STATUS": "ONLINE",
+					"BLACKOUT": false,
+					"BLACKOUT_COMMENT": "",
+					"ANOMALY_DESCRIPTION": {},
+					"STATE_CHANGE_DESCRIPTION": {}
+				}]
+			},
+			{
+				"NAME": "ora.LISTENER_SCAN2.lsnr",
+				"STATUS": [{
+					"NODE": "den00kez",
+					"STATUS": "ONLINE",
+					"BLACKOUT": false,
+					"BLACKOUT_COMMENT": "",
+					"ANOMALY_DESCRIPTION": {},
+					"STATE_CHANGE_DESCRIPTION": {}
+				}]
+			},
+			{
+				"NAME": "ora.LISTENER_SCAN1.lsnr",
+				"STATUS": [{
+					"NODE": "den00kez",
+					"STATUS": "ONLINE",
+					"BLACKOUT": false,
+					"BLACKOUT_COMMENT": "",
+					"ANOMALY_DESCRIPTION": {},
+					"STATE_CHANGE_DESCRIPTION": {}
+				}]
+			},
+			{
+				"NAME": "ora.LISTENER_SCAN3.lsnr",
+				"STATUS": [{
+					"NODE": "den00kez",
+					"STATUS": "ONLINE",
+					"BLACKOUT": false,
+					"BLACKOUT_COMMENT": "",
+					"ANOMALY_DESCRIPTION": {},
+					"STATE_CHANGE_DESCRIPTION": {}
+				}]
+			}
+		],
+		"ACFS": [{
+			"NAME": "ora.data.volume1.acfs",
+			"STATUS": [{
+				"NODE": "den00kez",
+				"STATUS": "ONLINE",
+				"BLACKOUT": false,
+				"BLACKOUT_COMMENT": "",
+				"ANOMALY_DESCRIPTION": {},
+				"STATE_CHANGE_DESCRIPTION": {}
+			}]
+		}],
+		"DATABASE": [{
+			"DB_NAME": "orcl",
+			"DB_UNIQUE_NAME": "orcl",
+			"BLACKOUT": false,
+			"BLACKOUT_COMMENT": "",
+			"INCIDENTS": [],
+			"REMOTE_ARCHIVE_DEST_COUNT": 0,
+			"DB_DATAGUARD": {
+				"SWITCHOVER": 1,
+				"FAILOVER": 1,
+				"STATUS": "ONLINE",
+				"BLACKOUT": false,
+				"BLACKOUT_COMMENT": ""
+			},
+			"ONLINE_INSTANCES": 1,
+			"TOTAL_INSTANCES": 1,
+			"INSTANCE": [{
+				"NAME": "orcl1",
+				"TARGET": "ONLINE",
+				"STATUS": "ONLINE",
+				"STATE_DETAILS": "Open,HOME=/scratch/u01/app/db/product",
+				"TARGET_SERVER": "den00kez",
+				"CONNECT": 1,
+				"BLACKOUT": false,
+				"BLACKOUT_COMMENT": "",
+				"ANOMALY_DESCRIPTION": {},
+				"STATE_CHANGE_DESCRIPTION": {}
+			}],
+			"PLUGGABLE_DBS": {
+				"INSTANCE": "orcl1",
+				"STATUS": [{
+					"PDB_NAME": "PDB$SEED",
+					"STATE": "READ ONLY",
+					"PDB_BACKUP_STATUS": "1",
+					"BLACKOUT": false,
+					"BLACKOUT_COMMENT": ""
+				}],
+				"PDB_TABLESPACES": []
+			},
+			"CDB_TABLESPACES": [{
+					"BLACKOUT": false,
+					"BLACKOUT_COMMENT": "",
+					"TBS_NAME": "SYSTEM",
+					"USED_PERCENT": 2.331,
+					"STATE_CHANGE_DESCRIPTION": {},
+					"ANOMALY_DESCRIPTION": {}
+				},
+				{
+					"BLACKOUT": false,
+					"BLACKOUT_COMMENT": "",
+					"TBS_NAME": "USERS",
+					"USED_PERCENT": 0.003,
+					"STATE_CHANGE_DESCRIPTION": {},
+					"ANOMALY_DESCRIPTION": {}
+				},
+				{
+					"BLACKOUT": false,
+					"BLACKOUT_COMMENT": "",
+					"TBS_NAME": "SYSAUX",
+					"USED_PERCENT": 1.055,
+					"STATE_CHANGE_DESCRIPTION": {},
+					"ANOMALY_DESCRIPTION": {}
+				}
+			],
+			"ANOMALY_DESCRIPTION": {},
+			"STATE_CHANGE_DESCRIPTION": {},
+			"FRA_USED_PCT": 0.0,
+			"DBTIMEZONE": "null",
+			"DB_BACKUP": {
+				"CDB_BACKUP_STATUS": 1,
+				"CDB_BACKUP_RUNNING": 1,
+				"CDB_BACKUP_MISSING": 1,
+				"ARC_BACKUP_STATUS": 1,
+				"ARC_BACKUP_RUNNING": 1,
+				"ARC_BACKUP_MISSING": 1,
+				"CDB_BACKUP_TFA_DATA": 1,
+				"BLACKOUT": false,
+				"BLACKOUT_COMMENT": "",
+				"ANOMALY_DESCRIPTION": {},
+				"STATE_CHANGE_DESCRIPTION": {}
+			},
+			"CONNECTION": 0
+		}],
+		"TFA": {
+			"SQLTICKER": [],
+			"HEALTH": [{
+				"HOSTNAME": "den00kez",
+				"PROXY_CONFIGURED": 1,
+				"REPOSITORY_STATUS": 1,
+				"REPOSITORY_PCT_USED": 0,
+				"HANDLER_STATUS": 1,
+				"EXCEPTIONS_STATUS": 1,
+				"SCANNER_STATUS": 1,
+				"COLLECTOR": {
+					"STATUS": "RUNNING",
+					"PID": "144705",
+					"PORT": "5000",
+					"VERSION": "22.1.0.0.0",
+					"BUILDID": "22100020220408194411"
+				}
+			}]
+		},
+		"SERVICE": [],
+		"Disk_Status": [{
+				"Disk_Name": "/dev/xvda5",
+				"MOUNT_POINT": "/oem",
+				"USED_PERCENT": 21.0,
+				"BLACKOUT": false,
+				"BLACKOUT_COMMENT": "",
+				"ANOMALY_DESCRIPTION": {},
+				"STATE_CHANGE_DESCRIPTION": {}
+			},
+			{
+				"Disk_Name": "/dev/mapper/DomUVol-scratch",
+				"MOUNT_POINT": "/scratch",
+				"USED_PERCENT": 12.0,
+				"BLACKOUT": false,
+				"BLACKOUT_COMMENT": "",
+				"ANOMALY_DESCRIPTION": {},
+				"STATE_CHANGE_DESCRIPTION": {}
+			},
+			{
+				"Disk_Name": "/dev/mapper/DomUVol-scratch",
+				"MOUNT_POINT": "/net/den00kez.us.oracle.com/scratch",
+				"USED_PERCENT": 12.0,
+				"BLACKOUT": false,
+				"BLACKOUT_COMMENT": "",
+				"ANOMALY_DESCRIPTION": {},
+				"STATE_CHANGE_DESCRIPTION": {}
+			},
+			{
+				"Disk_Name": "/dev/xvda2",
+				"MOUNT_POINT": "/",
+				"USED_PERCENT": 50.0,
+				"BLACKOUT": false,
+				"BLACKOUT_COMMENT": "",
+				"ANOMALY_DESCRIPTION": {},
+				"STATE_CHANGE_DESCRIPTION": {}
+			},
+			{
+				"Disk_Name": "/dev/xvda1",
+				"MOUNT_POINT": "/boot",
+				"USED_PERCENT": 54.0,
+				"BLACKOUT": false,
+				"BLACKOUT_COMMENT": "",
+				"ANOMALY_DESCRIPTION": {},
+				"STATE_CHANGE_DESCRIPTION": {}
+			}
+		],
+		"OS_UTILIZATION": {
+			"CPU_USR": 18,
+			"CPU_SYS": 16,
+			"CPU_IOWAIT": 5,
+			"CPU_IDLE": 61,
+			"CPU_UTIL": 39,
+			"RUN_QUEUE_SIZE": 1,
+			"LOAD_AVG_1MIN": 0.44,
+			"LOAD_AVG_5MIN": 0.61,
+			"LOAD_AVG_15MIN": 1.37,
+			"MEM_TOTAL_KB": 15202512,
+			"MEM_FREE_KB": 4429796,
+			"MEM_USED_PERCENT": 70.86,
+			"MEM_SWAP_TOTAL_KB": 18063336,
+			"MEM_SWAP_FREE_KB": 17871592,
+			"MEM_SWAP_USED_PERCENT": 1.06,
+			"BLACKOUT": false,
+			"BLACKOUT_COMMENT": ""
+		},
+		"INCIDENTS": [],
+		"CSTATE": [],
+		"telemetrycollectionid": "",
+		"filename": "/opt/oracle.ahf/data/repository/suptools/ddu/user_root/telemetry_59.json"
+	}
+}

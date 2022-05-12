@@ -29,4 +29,3 @@ EXPOSE 8000
 
 # Iniciar el servicio de Django con gunicorn
 CMD ["gunicorn", "--bind", ":8000", "--workers", "3", "mysite.wsgi"]
-
