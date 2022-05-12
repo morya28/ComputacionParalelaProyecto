@@ -1,18 +1,88 @@
+{% load static %}
 <html>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
         <meta name="author" content="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
         <link rel="icon" href="favicon.ico">
     </head>
+    <style>
+        body {
+            background-color: rgb(26, 37, 52);
+            margin: 0;
+            text-align: center;
+            width: 100%;
+        }
+        * {
+            font-family: 'Lato', serif;
+            font-size: 24px;
+        }
+        #main {
+            background-color: white;
+            display: inline-block;
+            margin-top: 2%;
+            width: 90%;
+            border-radius: 5px;
+            text-align: center;
+            padding: 2%;
+        }
+        #job_id {
+            width: 20%;
+            margin: 0 10px;
+            text-align: center;
+            border-width: 2px solid rgb(140, 140, 140);
+            border-radius: 2px;
+        }
+        #search_id {
+            cursor: pointer;
+            background-color: rgb(0, 129, 228);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 4px 20px;
+            font-size: 22px;
+        }
+        #json_panel {
+            background-color: black;
+            border-radius: 5px;
+            padding: 0;
+            display: inline-block;
+            width: 85%;
+            font-weight: bold;
+        }
+        #job_id_title {
+            background-color: rgb(212, 212, 212);
+            color: black;
+            margin: 0;
+            padding: 10px;
+            text-align: left;
+            padding-left: 15px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+        #json_data {
+            font-family: 'Courier New', Courier, monospace;
+            color: white;
+            font-size: 18px;
+        }
+    </style>
     <body>
-        {% include "side_nav.html" %}
-        <p>Farm job ID: {{farm_job_id}}</p>
-        <p>Service: {{service}}</p>
-        <p>Environment type: {{env_type}}</p>
-        <p>Family: {{family}}</p>
-        <p>Test case: {{test_case}}</p>
-        <p>JSON type: {{json_type}}</p>
+        <div id="main">
+            <form action="/search_id/" method="GET">
+                <span>Insert the job ID:</span>
+                <input type="text" id="job_id" name="farm_job_id">
+                <button type="submit" id="search_id">Search</button>
+            </form>
+            <div id="json_panel">
+                {% if json_data %}
+                    <div id="job_id_title">Job ID "{{farm_job_id}}" data:</div>
+                    <p id="json_data">{{json_data}}</p>
+                {% else %}
+                    <p id="json_data">No job ID data found.</p>
+                {% endif %}
+            </div>
+        </div>
     </body>
 </html>
